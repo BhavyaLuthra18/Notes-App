@@ -1,0 +1,224 @@
+:root {
+  --background-color: #ffc700;
+  --bs-primary-rgb: #12296c;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background-color);
+  color: var(--bs-primary-rgb);
+  font-weight: 300;
+  font-size: 1.2rem;
+  background-color: url(../img/noise-bg.png);
+}
+
+html,
+body,
+.home {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Unbounded", cursive;
+  font-weight: 800;
+}
+/*- CONTAINER --- */
+.container-fluid {
+  padding: 4px;
+  margin-bottom: 0;
+}
+
+.container-fluid-custom {
+  max-width: 1600px;
+}
+
+/* ------ ABOUT PAGE---- */
+.about-features-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-features {
+  flex: 1;
+}
+
+.about-features h1 {
+  display: flex;
+  align-items: center;
+}
+
+.about-features ul li {
+  font-size: 1.6rem;
+}
+.about-features p {
+  font-size: 1.4rem;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*-----BUTTON------*/
+.btn {
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+  border-radius: 2rem;
+}
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--bs-primary-rgb);
+  --bs-btn-border-color: var(--bs-primary-rgb);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #0043a8;
+  --bs-btn-hover-border-color: #0043a8;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--bs-primary-rgb);
+  --bs-btn-active-border-color: var(--bs-primary-rgb);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: var(--bs-primary-rgb);
+  --bs-btn-disabled-border-color: var(--bs-primary-rgb);
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--bs-primary-rgb);
+  --bs-btn-border-color: var(--bs-primary-rgb);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #0043a8;
+  --bs-btn-hover-border-color: #0043a8;
+  --bs-btn-focus-shadow-rgb: 13, 110, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--bs-primary-rgb);
+  --bs-btn-active-border-color: var(--bs-primary-rgb);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: var(--bs-primary-rgb);
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: var(--bs-primary-rgb);
+  --bs-gradient: none;
+}
+
+/*-------PAGINATION-------*/
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination-container ul.pagination {
+  border: 4px solid bisque;
+  border-width: fit-content;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+.pagination .page-link {
+  font-size: 1.4rem;
+}
+
+.pagination .page-link.active {
+  background-color: var(--bs-primary-rgb);
+  border-color: #b1c1ef;
+}
+
+.pagination .page-link:hover {
+  z-index: 2;
+  color: #0056b3;
+  background-color: #e9ecef;
+  background-color: #dee2e6;
+}
+
+/* ------HOME PAGE------- */
+@media (min-width: 1200px) {
+  .home {
+    background: url("../img/human-1.svg") left bottom no-repeat,
+      url("../img/human-2.svg") right bottom no-repeat,
+      url("../img/noise-bg.svg") left top repeat, var(--background-color);
+    background-position: left bottom, right bottom, left top;
+  }
+}
+
+.home-title::before {
+  content: url("../img/stars.svg");
+  position: absolute;
+  left: -50px;
+  top: -30px;
+}
+
+.home-title::after {
+  content: url("../img/stars.svg");
+  position: absolute;
+  right: -50px;
+  bottom: -30px;
+}
+
+/*-----FOOTER-----*/
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-weight: bolder;
+  background-color: rgb(255, 255, 126);
+  color: var(--bs-primary-rgb);
+  padding: 16px 16px;
+  margin-top: auto;
+}
+
+/* ----SEARCH-----*/
+.notes-title-tab {
+  background-color: white;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.notes-title-tab:hover {
+  transform: scale(1.05);
+  background-color: rgb(255, 255, 126);
+}
+
+.notes-title-tab a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*------- ALERT MESSAGES----- */
+#flash-message {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: 80%;
+  max-width: 500px;
+}
+
+#flash-message button {
+  margin-right: 10px;
+}

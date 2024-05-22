@@ -1,0 +1,43 @@
+<div class="container-fluid">
+  <header
+    class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom"
+  >
+    <a
+      href="/dashboard"
+      class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-primary text-decoration-none fw-bold fs-2"
+    >
+      Notes <img src="/img/notes.png" width="50px" />
+    </a>
+
+    <form
+      class="nav col-12 col-md-auto flex-fill mb-2 justify-content-center mb-md-0"
+      role="search"
+      method="POST"
+      action="/dashboard/search"
+    >
+      <input
+        type="search"
+        name="searchTerm"
+        class="form-control border-primary"
+        placeholder="Search...."
+        aria-label="Search"
+      />
+    </form>
+    <div
+      class="col-md-3 text-end d-flex align-items-center justify-content-end"
+    >
+      <% if(req.user && req.user.profileImage){ %>
+      <img
+        src="<%= req.user.profileImage %>"
+        alt="Profile Image"
+        width="50px"
+        height="50px"
+        class="rounded-circle me-2"
+      />
+      <% } %>
+      <a href="/logout" type="button" class="btn btn-outline-primary">
+        Logout
+      </a>
+    </div>
+  </header>
+</div>
