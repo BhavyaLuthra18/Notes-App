@@ -149,8 +149,8 @@ h6 {
 /* ------HOME PAGE------- */
 @media (min-width: 1200px) {
   .home {
-    background: url("../img/human-1.svg") left bottom no-repeat,
-      url("../img/human-2.svg") right bottom no-repeat,
+    background: url("../img/men.png") left bottom no-repeat,
+      url("../img/women.png") right bottom no-repeat,
       url("../img/noise-bg.svg") left top repeat, var(--background-color);
     background-position: left bottom, right bottom, left top;
   }
