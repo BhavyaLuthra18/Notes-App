@@ -1,27 +1,39 @@
 <div class="container-fluid">
   <header
-    class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom"
+    class="d-flex flex-wrap align-items-center justify-content-between py-3 mb-4 border-bottom"
   >
     <a
       href="/"
-      class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-primary text-decoration-none fw-bold fs-2"
+      class="d-flex align-items-center col-6 col-md-3 mb-2 mb-md-0 text-primary text-decoration-none fw-bold fs-2"
     >
       Notes
-      <img src="/img/notes.png" width="50px" />
+      <img src="/img/notes.png" width="50px" class="ms-2" />
     </a>
 
-    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-      <li><a href="/" class="nav-link px-2 link-secondary">Home</a></li>
-      <li><a href="#" class="nav-link px-2 link-dark">Features</a></li>
-      <li><a href="#" class="nav-link px-2 link-dark">FAQs</a></li>
-      <li><a href="/about" class="nav-link px-2 link-dark">About</a></li>
-    </ul>
+    <button
+      class="navbar-toggler d-md-none me-3"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-    <div class="col-md-3 text-end">
-      <a href="/auth/google" type="button" class="btn btn-outline-primary me-2">
-        Sign Up
-      </a>
-      <a href="/auth/google" type="button" class="btn btn-primary">Sign In</a>
+    <div class="collapse navbar-collapse col-md-auto" id="navbarNav">
+      <ul class="nav justify-content-center">
+        <li><a href="/" class="nav-link px-2 link-secondary">Home</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">Features</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">FAQs</a></li>
+        <li><a href="/about" class="nav-link px-2 link-dark">About</a></li>
+      </ul>
+    </div>
+
+    <div class="col-6 col-md-3 text-end">
+      <a href="/auth/google" class="btn btn-outline-primary me-2">Sign Up</a>
+      <a href="/auth/google" class="btn btn-primary">Sign In</a>
     </div>
   </header>
 </div>

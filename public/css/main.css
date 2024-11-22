@@ -12,6 +12,7 @@ body {
   font-weight: 300;
   font-size: 1.2rem;
   background-color: url(../img/noise-bg.png);
+  overflow-x: hidden;
 }
 
 html,
@@ -71,7 +72,7 @@ h6 {
 }
 
 .image-container img {
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
 }
 
@@ -153,7 +154,12 @@ h6 {
       url("../img/women.png") right bottom no-repeat,
       url("../img/noise-bg.svg") left top repeat, var(--background-color);
     background-position: left bottom, right bottom, left top;
+    background-size: 400px auto, 400px auto, 10px, cover;
   }
+}
+
+.home-title {
+  font-size: 2.5rem;
 }
 
 .home-title::before {
@@ -184,7 +190,7 @@ h6 {
   font-weight: bolder;
   background-color: rgb(255, 255, 126);
   color: var(--bs-primary-rgb);
-  padding: 16px 16px;
+  padding: 10px 10px;
   margin-top: auto;
 }
 
